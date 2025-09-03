@@ -1,0 +1,269 @@
+:root {
+    --primary-hue: 210;
+    --primary-color: hsl(var(--primary-hue), 89%, 60%);
+    --primary-color-dark: hsl(var(--primary-hue), 80%, 50%);
+    --success-color: hsl(150, 60%, 50%);
+    --error-color: hsl(0, 80%, 60%);
+    --bg-light: #f6f9fc;
+    --bg-dark: #eef2f7;
+    --card-bg: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --font-family: 'Inter', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.hidden { display: none !important; }
+
+.converter-wrapper {
+    width: 100%;
+    max-width: 700px;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.app-header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-color-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.app-header p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+.converter-body {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+}
+
+/* Upload Area */
+.upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.upload-area:hover, .upload-area.drag-over {
+    background-color: var(--bg-light);
+    border-color: var(--primary-color);
+}
+.upload-content .upload-icon {
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+.upload-area:hover .upload-icon {
+    transform: translateY(-5px) scale(1.1);
+}
+.upload-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.upload-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+#file-input { display: none; }
+
+/* Controls Area */
+.controls-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--bg-dark);
+    border-radius: 10px;
+}
+.format-control label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-right: 10px;
+}
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.select-wrapper::after {
+    content: '▼';
+    font-size: 12px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--text-secondary);
+}
+#format-select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 8px 30px 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Action Buttons */
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.action-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+.convert-btn {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-color-dark));
+    color: white;
+}
+.download-zip-btn {
+    background: var(--success-color);
+    color: white;
+}
+.clear-btn {
+    background-color: var(--border-color);
+    color: var(--text-secondary);
+}
+.clear-btn:hover {
+    background-color: #d1d9e6;
+}
+
+/* File List */
+.file-list-area { margin-top: 20px; }
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: slideInUp 0.5s ease-out;
+}
+@keyframes slideInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.thumbnail {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.file-info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+.file-name {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.file-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+.progress-bar-container {
+    height: 6px;
+    width: 100%;
+    background-color: var(--bg-dark);
+    border-radius: 3px;
+    margin-top: 8px;
+    overflow: hidden;
+    display: none;
+}
+.progress-bar-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+.file-action {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.download-icon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--success-color);
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+.download-icon-btn:hover { transform: scale(1.1); }
+.status-icon {
+    width: 24px;
+    height: 24px;
+}
+.error-icon { color: var(--error-color); }
+
+/* Footer */
+.footer-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+.footer-actions .download-zip-btn,
+.footer-actions .clear-btn {
+    flex: 1; /* Makes both buttons take up equal space */
+}
+
+
+@media (max-width: 600px) {
+    body { padding: 20px 10px; }
+    .converter-body { padding: 20px; }
+    .controls-area { flex-direction: column; gap: 15px; align-items: stretch; }
+}
