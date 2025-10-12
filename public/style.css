@@ -36,15 +36,12 @@ body {
     text-align: center;
     margin-bottom: 30px;
 }
-
-/* ========== পরিবর্তনটি এখানে করা হয়েছে ========== */
 .app-icon {
     width: 64px;
     height: 64px;
-    margin-bottom: 1rem; /* 16px space between icon and title */
+    margin-bottom: 1rem;
     object-fit: contain;
 }
-
 .app-header h1 {
     font-size: 2.25rem;
     font-weight: 700;
@@ -78,14 +75,19 @@ body {
     background-color: var(--bg-light);
     border-color: var(--primary-color);
 }
-.upload-content .upload-icon {
-    color: var(--primary-color);
+
+/* ========== পরিবর্তনটি এখানে করা হয়েছে ========== */
+.upload-icon-img {
+    width: 48px;
+    height: 48px;
     margin-bottom: 16px;
     transition: transform 0.3s ease;
+    object-fit: contain;
 }
-.upload-area:hover .upload-icon {
+.upload-area:hover .upload-icon-img {
     transform: translateY(-5px) scale(1.1);
 }
+
 .upload-title {
     font-size: 1rem;
     font-weight: 500;
