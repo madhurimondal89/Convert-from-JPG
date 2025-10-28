@@ -1,0 +1,8 @@
+# Allow all search engine crawlers
+User-agent: *
+
+# Allow crawlers to access the entire site
+Allow: /
+
+# Provide the location of the sitemap
+Sitemap: https://convert-from-jpg.imagecompress.in/sitemap.xml
