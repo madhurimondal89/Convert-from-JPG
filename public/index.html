@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Converter | Convert JPG to Anything</title>
+    
+    <!-- ========== SEO পরিবর্তনগুলো এখানে করা হয়েছে ========== -->
+    <title>JPG Converter - Convert JPG to PNG, WEBP, GIF Online Free</title>
+    <meta name="description" content="A powerful and free online tool to convert your JPG images to other formats like PNG, WEBP, GIF, and TIFF. High-quality conversion with a simple drag-and-drop interface.">
+    <meta name="keywords" content="jpg converter, jpg to png, jpg to webp, jpg to gif, convert from jpg, image converter">
+    <!-- ======================================================= -->
+    
+    <link rel="icon" type="image/png" href="icon.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <header class="site-header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <img src="logo.png" alt="ImageCompress Logo">
+            </a>
+            <nav class="main-nav">
+                <a href="https://www.imagecompress.in/" target="_blank">Home</a>
+            </nav>
+        </div>
+    </header>
+
     <main class="converter-wrapper">
-        <header class="app-header">
-            <img src="icon.png" alt="App Icon" class="app-icon">
-            <h1>Image Converter</h1>
+        <div class="intro-text">
+            <h2>Convert JPG to Other Formats</h2>
             <p>A professional-grade tool to convert JPG to PNG, GIF, WEBP, TIF with unparalleled quality.</p>
-        </header>
+        </div>
 
         <div class="converter-body">
             <div class="upload-area" id="drop-zone">
                 <div class="upload-content">
-                    <!-- ========== পরিবর্তনটি এখানে করা হয়েছে ========== -->
                     <img src="upload.png" alt="Upload Icon" class="upload-icon-img">
-                    
                     <p class="upload-title"><strong>Click to browse</strong> or drag and drop your files</p>
                     <p class="upload-subtitle">JPG/JPEG files are supported</p>
                 </div>
@@ -47,9 +64,7 @@
                 </button>
             </div>
 
-            <div class="file-list-area" id="preview-container">
-                <!-- File previews will appear here -->
-            </div>
+            <div class="file-list-area" id="preview-container"></div>
 
             <div class="footer-actions hidden" id="footer-actions">
                 <button class="action-button download-zip-btn" id="download-all-btn">Download All (.zip)</button>
@@ -58,6 +73,20 @@
         </div>
     </main>
     
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="copyright">&copy; 2025 imagecompress.in All Rights Reserved.</p>
+            <nav class="footer-nav">
+                <a href="https://www.imagecompress.in/about-us/" target="_blank">About Us</a>
+                <a href="https://www.imagecompress.in/contact-us/" target="_blank">Contact Us</a>
+                <a href="https://www.imagecompress.in/disclaimer/" target="_blank">Disclaimer</a>
+                <a href="https://www.imagecompress.in/dmca-policy/" target="_blank">DMCA Policy</a>
+                <a href="https://www.imagecompress.in/privacy-policy/" target="_blank">Privacy Policy</a>
+                <a href="https://www.imagecompress.in/terms-and-conditions/" target="_blank">Terms and Conditions</a>
+            </nav>
+        </div>
+    </footer>
+
     <template id="file-preview-template">
         <div class="file-item">
             <img class="thumbnail" src="" alt="preview">
@@ -68,9 +97,7 @@
                     <div class="progress-bar-fill"></div>
                 </div>
             </div>
-            <div class="file-action">
-                <!-- Status icon or download button -->
-            </div>
+            <div class="file-action"></div>
         </div>
     </template>
 
