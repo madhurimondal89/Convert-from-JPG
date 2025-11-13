@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- ========== SEO পরিবর্তনগুলো এখানে করা হয়েছে ========== -->
     <title>JPG Converter - Convert JPG to PNG, WEBP, GIF Online Free</title>
     <meta name="description" content="A powerful and free online tool to convert your JPG images to other formats like PNG, WEBP, GIF, and TIFF. High-quality conversion with a simple drag-and-drop interface.">
     <meta name="keywords" content="jpg converter, jpg to png, jpg to webp, jpg to gif, convert from jpg, image converter">
-    <!-- ======================================================= -->
-    
     <link rel="icon" type="image/png" href="icon.png">
+
+    <!-- Google AdSense মূল স্ক্রিপ্ট -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8732458645979427"
+     crossorigin="anonymous"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,49 +30,163 @@
         </div>
     </header>
 
-    <main class="converter-wrapper">
-        <div class="intro-text">
-            <h2>Convert JPG to Other Formats</h2>
-            <p>A professional-grade tool to convert JPG to PNG, GIF, WEBP, TIF with unparalleled quality.</p>
-        </div>
+    <div class="page-content">
+        <!-- বাম দিকের বিজ্ঞাপনের জায়গা -->
+        <aside class="ad-sidebar left-sidebar">
+            <!-- আপনি চাইলে এখানে বাম দিকের বিজ্ঞাপন কোড বসাতে পারেন -->
+        </aside>
 
-        <div class="converter-body">
-            <div class="upload-area" id="drop-zone">
-                <div class="upload-content">
-                    <img src="upload.png" alt="Upload Icon" class="upload-icon-img">
-                    <p class="upload-title"><strong>Click to browse</strong> or drag and drop your files</p>
-                    <p class="upload-subtitle">JPG/JPEG files are supported</p>
-                </div>
-                <input type="file" id="file-input" multiple accept="image/jpeg,image/jpg">
+        <!-- মাঝখানের মূল কন্টেন্ট -->
+        <main class="main-column">
+            <div class="intro-text">
+                <h2>Convert JPG to Other Formats</h2>
+                <p>A professional-grade tool to convert JPG to PNG, GIF, WEBP, TIF with unparalleled quality.</p>
             </div>
 
-            <div class="controls-area hidden" id="controls-area">
-                <div class="format-control">
-                    <label for="format-select">Convert all to</label>
-                    <div class="select-wrapper">
-                        <select id="format-select">
-                            <option value="png">PNG</option>
-                            <option value="webp">WEBP</option>
-                            <option value="gif">GIF</option>
-                            <option value="tiff">TIFF</option>
-                        </select>
+            <div class="converter-body">
+                <div class="upload-area" id="drop-zone">
+                    <div class="upload-content">
+                        <img src="upload.png" alt="Upload Icon" class="upload-icon-img">
+                        <p class="upload-title"><strong>Click to browse</strong> or drag and drop your files</p>
+                        <p class="upload-subtitle">JPG/JPEG files are supported</p>
+                    </div>
+                    <input type="file" id="file-input" multiple accept="image/jpeg,image/jpg">
+                </div>
+
+                <div class="controls-area hidden" id="controls-area">
+                    <div class="format-control">
+                        <label for="format-select">Convert all to</label>
+                        <div class="select-wrapper">
+                            <select id="format-select">
+                                <option value="png">PNG</option>
+                                <option value="webp">WEBP</option>
+                                <option value="gif">GIF</option>
+                                <option value="tiff">TIFF</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="action-button convert-btn" id="convert-all-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                        <span>Convert</span>
+                    </button>
+                </div>
+
+                <div class="file-list-area" id="preview-container"></div>
+
+                <div class="footer-actions hidden" id="footer-actions">
+                    <button class="action-button download-zip-btn" id="download-all-btn">Download All (.zip)</button>
+                    <button class="action-button clear-btn" id="clear-all-btn">Clear All</button>
+                </div>
+            </div>
+
+            <!-- SEO Accordion সেকশন -->
+            <div class="seo-content-section">
+                <!-- আইটেম ১ -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>How to Convert Images from JPG</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>Converting your JPG files to other formats like PNG, WEBP, or GIF is a breeze with our tool:</p>
+                            <ol>
+                                <li><strong>Upload Your JPGs:</strong> Drag and drop your JPG or JPEG files into the upload area, or click to browse and select them from your computer.</li>
+                                <li><strong>Choose the Output Format:</strong> Use the "Convert all to" dropdown menu to select your desired format (e.g., PNG for transparency, WEBP for modern web use).</li>
+                                <li><strong>Start Converting:</strong> Click the "Convert" button. Our server will process your images and convert them to the selected format.</li>
+                                <li><strong>Download Your Files:</strong> Once the conversion is complete, download links will appear for each file. You can download them one by one or all at once in a ZIP file.</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <button class="action-button convert-btn" id="convert-all-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
-                    <span>Convert</span>
-                </button>
+                <!-- আইটেম ২ -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Why Use Our JPG Converter</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>Our converter is built to provide a superior experience for all your image format needs:</p>
+                            <ul>
+                                <li><strong>Versatile Format Support:</strong> Easily convert your JPGs to a variety of essential formats, including PNG, WEBP, GIF, and TIFF, to suit any project requirement.</li>
+                                <li><strong>High-Fidelity Conversion:</strong> We use advanced conversion algorithms to ensure that the quality of your original image is preserved as much as possible in the new format.</li>
+                                <li><strong>Batch Processing Power:</strong> Don't waste time converting files individually. Upload multiple JPGs and convert them all in a single, efficient operation.</li>
+                                <li><strong>Secure and Private:</strong> Your uploaded files are safe with us. They are automatically deleted from our servers after processing to ensure your data privacy.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- আইটেম ৩ -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Frequently Asked Questions (FAQ)</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <h3>When should I convert a JPG to PNG?</h3>
+                            <p>You should convert a JPG to PNG when you need a transparent background or when you are working with simple graphics, logos, or text where sharp lines and solid colors are important. PNG is a "lossless" format, which means it preserves all the original image data, preventing any quality degradation.</p>
+                            <h3>What is WEBP and why should I convert my JPG to it?</h3>
+                            <p>WEBP is a modern image format developed by Google. It provides superior lossless and lossy compression for images on the web. Converting a <strong>JPG to WEBP</strong> can result in significantly smaller file sizes (often 25-35% smaller) at the same visual quality, which makes your website load much faster.</p>
+                            <h3>Will I lose quality when converting from a JPG?</h3>
+                            <p>Since JPG is already a "lossy" format, converting it to another lossy format (like another JPG or WEBP) can introduce further quality loss. However, converting a <strong>JPG to PNG</strong> (a lossless format) will perfectly preserve the quality of the source JPG. Our tool is optimized to minimize any quality degradation during conversion.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- আইটেম ৪: SEO Article -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>A Guide to Modern Image Formats (PNG, WEBP, GIF)</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>In the vast ecosystem of the internet, the JPG format has long been the reigning king of photography. Its ability to compress large photos into manageable file sizes made it the backbone of the visual web. However, the digital landscape is constantly evolving. While JPG is an excellent general-purpose format, modern web design, performance optimization, and specific use-cases often demand greater flexibility. This is where a powerful <strong>JPG converter</strong> becomes an essential tool in every creator's toolkit. Understanding when and why you should <strong>convert from JPG</strong> to other formats like PNG or WEBP can unlock new design possibilities and significantly boost your website's performance. This comprehensive guide will explore the world beyond JPG and demonstrate how our <strong>online image converter</strong> can help you make the right choice every time.</p>
+                            <h3>Beyond the Universal Standard: The Limitations of JPG</h3>
+                            <p>Before diving into the alternatives, it's crucial to understand why converting from JPG is sometimes necessary. Despite its strengths, JPG has two major limitations:</p>
+                            <ol>
+                                <li><strong>Lack of Transparency:</strong> JPG does not support an "alpha" channel, meaning it cannot handle transparent backgrounds. Any attempt to save an image with transparency as a JPG will result in the transparent areas being filled with a solid color, usually white. This makes it unsuitable for logos, icons, or any graphic that needs to blend seamlessly with a webpage's background.</li>
+                                <li><strong>Generational Quality Loss:</strong> Because JPG uses lossy compression, every time you open, edit, and re-save a JPG file, more image data is discarded. This cumulative quality degradation, known as generational loss, can quickly turn a sharp photo into a blurry, artifact-filled mess.</li>
+                            </ol>
+                            <p>Recognizing these limitations is the first step toward choosing a better format for your specific needs, whether that means converting a <strong>JPG to PNG</strong> for design purposes or a <strong>JPG to WEBP</strong> for superior web performance.</p>
+                            <h3>PNG: The Undisputed Champion of Transparency and Sharpness</h3>
+                            <p>PNG (Portable Network Graphics) is the ultimate solution for any image that isn't a photograph. It uses lossless compression, which means no quality is lost, no matter how many times you save the file. Its most celebrated feature, however, is its full support for alpha channel transparency.</p>
+                            <h4>When should you use a <strong>JPG to PNG converter</strong>?</h4>
+                            <ul>
+                                <li><strong>For Logos and Icons:</strong> If you have a logo saved as a JPG with a white background and you want to place it on a colored section of your website, you must convert it to PNG to make the background transparent.</li>
+                                <li><strong>For Graphics with Text:</strong> The sharp, clean lines of text and graphic elements are perfectly preserved in the PNG format. Converting a JPG graphic to PNG can prevent the fuzzy artifacts that often appear around text in a highly compressed JPG.</li>
+                                <li><strong>Preserving Editing Quality:</strong> If you need to perform multiple edits on an image that was originally a JPG, converting it to a lossless format like PNG for the editing process is a professional workflow. This prevents the dreaded generational quality loss. Our <strong>online converter</strong> makes this an easy first step.</li>
+                            </ul>
+                            <h3>WEBP: The Future of Web Performance, Today</h3>
+                            <p>Developed by Google with the explicit goal of making the web faster, WEBP is a modern, next-generation image format. It is a versatile powerhouse that supports both lossy and lossless compression, transparency, and even animation—all while delivering significantly smaller file sizes than its predecessors. Converting a <strong>JPG to WEBP</strong> is one of the most effective ways to <strong>reduce image size</strong> for your website without sacrificing visual quality.</p>
+                            <p>A WEBP file is typically 25-35% smaller than a JPG of the same quality. For a website with dozens of images, this difference is monumental. It translates directly to faster page load times, a better user experience (especially on mobile), and a significant boost in SEO rankings. As of today, WEBP is supported by all major modern browsers, making it a safe and highly recommended format for any forward-thinking web project. It truly is the best of both worlds: the high compression of JPG and the transparency of PNG, all in one efficient package.</p>
+                            <h3>GIF: The Nostalgic Veteran of Animation</h3>
+                            <p>The GIF (Graphics Interchange Format) is one of the oldest image formats still in widespread use. Its primary use case today is for short, looping animations. GIFs are limited to a palette of only 256 colors, which makes them a poor choice for converting complex photographs from JPG. A <strong>JPG to GIF</strong> conversion will almost always result in a significant loss of color depth and an increase in file size compared to an optimized JPG or WEBP.</p>
+                            <p>However, if you need to create a very simple, low-color graphic or a single frame for an animation from a JPG source, this conversion is possible. But for most static image needs, converting a <strong>JPG to PNG</strong> or <strong>JPG to WEBP</strong> is a far superior choice.</p>
+                            <h3>Conclusion: Empowering Your Creativity with the Right Format</h3>
+                            <p>The mastery of digital media lies not just in creating beautiful images, but also in delivering them in the most effective format. While JPG is a fantastic starting point, knowing when to <strong>convert from JPG</strong> gives you the flexibility to meet any creative or technical challenge. Our versatile <strong>JPG converter</strong> is more than just a tool; it's a bridge that connects the universal compatibility of JPG with the specific strengths of modern formats like PNG and WEBP. By providing a fast, secure, and user-friendly platform, we empower you to make smarter, more strategic decisions about your visual content. Take your projects to the next level by choosing the perfect format for every situation.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </main>
 
-            <div class="file-list-area" id="preview-container"></div>
+        <!-- ডান দিকের বিজ্ঞাপনের জায়গা -->
+        <aside class="ad-sidebar right-sidebar">
+            <!-- convert from jpg R -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8732458645979427"
+                 data-ad-slot="7084265207"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </aside>
+    </div>
 
-            <div class="footer-actions hidden" id="footer-actions">
-                <button class="action-button download-zip-btn" id="download-all-btn">Download All (.zip)</button>
-                <button class="action-button clear-btn" id="clear-all-btn">Clear All</button>
-            </div>
-        </div>
-    </main>
-    
     <footer class="site-footer">
         <div class="footer-content">
             <p class="copyright">&copy; 2025 imagecompress.in All Rights Reserved.</p>
@@ -86,7 +200,7 @@
             </nav>
         </div>
     </footer>
-
+    
     <template id="file-preview-template">
         <div class="file-item">
             <img class="thumbnail" src="" alt="preview">
@@ -102,5 +216,27 @@
     </template>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('.accordion-icon');
+                    const isActive = header.classList.contains('active');
+                    accordionHeaders.forEach(h => {
+                        h.classList.remove('active');
+                        h.nextElementSibling.style.maxHeight = null;
+                        h.querySelector('.accordion-icon').textContent = '+';
+                    });
+                    if (!isActive) {
+                        header.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.textContent = '−';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
